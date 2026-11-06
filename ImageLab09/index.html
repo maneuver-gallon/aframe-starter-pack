@@ -10,6 +10,7 @@
         <a-cone position="0.03 0 0" radius-bottom="0.1" rotation="90 5 0" color="#FF3333"></a-cone>
         <a-box position="0.2 0.15 -0.4" width="0.1" height="0.1" depth="0.1" rotation="-33 85 56" color="black"></a-box>
         <a-box position="-0.2 0.15 -0.4" width="0.1" height="0.1" depth="0.1" rotation="33 85 56" color="black"></a-box>
+        <a-circle position="0 -0.4 -0.67" rotation="60 0 0" radius="0.5" color="black"></a-circle>
       </a-entity>
 
       <a-entity id="snow" position="0 1 -5">
@@ -24,10 +25,14 @@
         <a-cylinder position="0 0.12 0" radius="0.51" height="0.1" color="white"></a-cylinder>
       </a-entity>
 
-      <a-plane position="0 0.1 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-circle radius="2" position="-0.2 0.01 -4.5" rotation="-90 0 0" color="#ccccff"></a-circle>
+      <a-circle radius="1" position="0.5 0.01 -3.2" rotation="-90 0 0" color="#ccccff"></a-circle>
+
       <!-- <a-sky color="#ECECEC"></a-sky> -->
       <!-- the enviroment entity includes a sky. Choose from the presets"none, default, contact, egypt, checkerboard, forest, goaland, yavapai, goldmine, threetowers, poison, arches, tron, japan, dream, volcano, starry, osiris, moon" -->
-      <a-entity environment="preset: dream; dressingAmount: 500"></a-entity>
+      
+      <a-entity environment="preset: egypt; dressingAmount: 30"></a-entity>
+    
     </a-scene>
   </body>
 </html>
