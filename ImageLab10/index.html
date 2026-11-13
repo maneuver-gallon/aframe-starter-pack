@@ -5,11 +5,28 @@
   </head>
   <body>
     <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
-    </a-scene>
+      <a-assets>
+        <img id="wood" src="assets/wood.jpg">
+        <img id="ice" src="assets/ice.jpg">
+        <img id="hot" src="assets/sun.jpg">
+        <img id="skybox" src="assets/skybox.jpg">
+      </a-assets>
+        
+      <a-sky src="#skybox"></a-sky>
+
+      <a-entity visible="true" position="80 100 -200" id="sun">
+        <a-sphere opacity=".2" radius="15" src="#hot"></a-sphere>
+        <a-sphere opacity="1" radius="12" color="#ffdf00"></a-sphere>
+      </a-entity>
+      
+      <a-entity id="pop" visible="true" scale=".5 .5 .5" position="0.5 1 -2" rotation="-10 20 -30">
+        <a-box src="#ice" opacity=".2" width="1.5" height="2.5" depth="0.5" position="0 1 0"></a-box>
+        <a-entity id="b" scale="0.95 0.99 0.99" position="0 0.011 0">
+          <a-box color="#ff9f9f" opacity="1" width="1.5" height="2.5" depth="0.5" position="0 1 0"></a-box>
+        </a-entity>
+        <a-box src="#wood" material="repeat: .5 .5" width="0.3" height="2" depth="0.11" position="-.2 0 0"></a-box>
+        <a-box src="#wood" material="repeat: .5 .5" width="0.3" height="2" depth="0.11" position=".2 0 0"></a-box>
+      </a-entity>
+      </a-scene>
   </body>
 </html>
