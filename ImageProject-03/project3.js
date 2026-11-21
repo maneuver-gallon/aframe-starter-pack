@@ -42,4 +42,5 @@ function buildScene(num) {
     }
 }
 
-buildScene(12);
+const img = document.getElementById("streetlight");
+img.addEventListener("load", buildScene(12));
